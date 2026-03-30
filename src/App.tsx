@@ -158,9 +158,9 @@ export default function App() {
       <main className="relative z-10 max-w-7xl mx-auto px-6 pt-48 pb-32">
         <div className="text-center mb-24">
           <div>
-            <h1 className="text-5xl md:text-8xl font-display font-bold tracking-tighter mb-6 leading-none">
+            <h1 className="text-5xl md:text-8xl font-display font-medium tracking-tighter mb-6 leading-none text-white">
               Pacotes para <br />
-              <span className="animate-shine font-black glow-text">Redes Sociais</span>
+              <span className="text-neon-yellow font-bold">Redes Sociais</span>
             </h1>
             <p className="text-white max-w-2xl mx-auto text-lg md:text-xl font-light">
               Design estratégico e tecnológico para marcas que <span className="font-bold">buscam autoridade visual e crescimento orgânico.</span>
