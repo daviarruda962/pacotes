@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-yellow: #ffcc00;
+  --color-neon-yellow-dark: #ccaa00;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased overflow-x-hidden;
+  }
+}
+
+@keyframes shine {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-shine {
+  background: linear-gradient(
+    90deg, 
+    var(--color-neon-yellow) 0%, 
+    var(--color-neon-yellow-dark) 25%, 
+    var(--color-neon-yellow) 50%, 
+    var(--color-neon-yellow-dark) 75%, 
+    var(--color-neon-yellow) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  text-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+}
+
+.glow-text {
+  filter: drop-shadow(0 0 8px rgba(255, 204, 0, 0.5));
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700;900&display=swap');
