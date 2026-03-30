@@ -96,12 +96,12 @@ export default function App() {
       {/* Background Decor */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {/* Main Glows */}
-        <div className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] bg-neon-yellow/10 blur-[160px] rounded-full animate-pulse" />
-        <div className="absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] bg-neon-yellow/10 blur-[160px] rounded-full animate-pulse" style={{ animationDelay: '3s' }} />
+        <div className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] bg-neon-yellow/15 blur-[160px] rounded-full animate-pulse" />
+        <div className="absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] bg-neon-yellow/15 blur-[160px] rounded-full animate-pulse" style={{ animationDelay: '3s' }} />
         
         {/* Accent Glows */}
-        <div className="absolute top-1/4 right-1/4 w-[20%] h-[20%] bg-neon-yellow/5 blur-[80px] rounded-full" />
-        <div className="absolute bottom-1/4 left-1/4 w-[20%] h-[20%] bg-neon-yellow/5 blur-[80px] rounded-full" />
+        <div className="absolute top-1/4 right-1/4 w-[25%] h-[25%] bg-neon-yellow/10 blur-[80px] rounded-full" />
+        <div className="absolute bottom-1/4 left-1/4 w-[25%] h-[25%] bg-neon-yellow/10 blur-[80px] rounded-full" />
         
         {/* Neon Beams */}
         <div className="neon-beam" style={{ animationDelay: '0s' }} />
@@ -114,7 +114,7 @@ export default function App() {
         <div className="floating-particle" style={{ top: '10%', left: '70%', animationDelay: '6s' }} />
         
         {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.04]" 
+        <div className="absolute inset-0 opacity-[0.07]" 
           style={{ 
             backgroundImage: `linear-gradient(var(--color-neon-yellow) 1px, transparent 1px), linear-gradient(90deg, var(--color-neon-yellow) 1px, transparent 1px)`,
             backgroundSize: '50px 50px'
@@ -122,7 +122,7 @@ export default function App() {
         />
         
         {/* Vignette */}
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/50 to-black" />
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/30 to-black/80" />
       </div>
 
       <motion.header 
@@ -163,7 +163,7 @@ export default function App() {
               <span className="text-neon-yellow font-bold">Redes Sociais</span>
             </h1>
             <p className="text-white max-w-2xl mx-auto text-lg md:text-xl font-light">
-              Design estratégico e tecnológico para marcas que <span className="font-bold">buscam autoridade visual e crescimento orgânico.</span>
+              Para empresas e marcas que <span className="font-bold">buscam autoridade visual e crescimento orgânico.</span>
             </p>
           </div>
         </div>
