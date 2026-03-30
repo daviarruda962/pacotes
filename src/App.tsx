@@ -25,7 +25,7 @@ const PricingCard = ({ title, price, features, delay, recommended = false, month
       transition={{ duration: 0.5 }}
       className={`relative flex flex-col p-8 rounded-2xl border ${
         recommended 
-          ? "border-neon-yellow bg-neon-yellow/5" 
+          ? "border-neon-yellow bg-neon-yellow/5 shadow-[0_0_30px_rgba(255,204,0,0.1)]" 
           : "border-white/10 bg-white/5"
       } backdrop-blur-sm transition-all hover:border-neon-yellow hover:shadow-[0_0_50px_rgba(255,204,0,0.3)] group`}
     >
@@ -92,10 +92,37 @@ export default function App() {
 
   return (
     <div className="min-h-screen font-sans selection:bg-neon-yellow selection:text-black bg-black">
+      <div className="noise-overlay" />
       {/* Background Decor */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-neon-yellow/5 blur-[120px] rounded-full" />
-        <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-neon-yellow/5 blur-[120px] rounded-full" />
+        {/* Main Glows */}
+        <div className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] bg-neon-yellow/10 blur-[160px] rounded-full animate-pulse" />
+        <div className="absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] bg-neon-yellow/10 blur-[160px] rounded-full animate-pulse" style={{ animationDelay: '3s' }} />
+        
+        {/* Accent Glows */}
+        <div className="absolute top-1/4 right-1/4 w-[20%] h-[20%] bg-neon-yellow/5 blur-[80px] rounded-full" />
+        <div className="absolute bottom-1/4 left-1/4 w-[20%] h-[20%] bg-neon-yellow/5 blur-[80px] rounded-full" />
+        
+        {/* Neon Beams */}
+        <div className="neon-beam" style={{ animationDelay: '0s' }} />
+        <div className="neon-beam" style={{ animationDelay: '4s' }} />
+        
+        {/* Floating Particles */}
+        <div className="floating-particle" style={{ top: '20%', left: '15%', animationDelay: '0s' }} />
+        <div className="floating-particle" style={{ top: '60%', left: '85%', animationDelay: '2s' }} />
+        <div className="floating-particle" style={{ top: '80%', left: '30%', animationDelay: '4s' }} />
+        <div className="floating-particle" style={{ top: '10%', left: '70%', animationDelay: '6s' }} />
+        
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-[0.04]" 
+          style={{ 
+            backgroundImage: `linear-gradient(var(--color-neon-yellow) 1px, transparent 1px), linear-gradient(90deg, var(--color-neon-yellow) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }} 
+        />
+        
+        {/* Vignette */}
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/50 to-black" />
       </div>
 
       <motion.header 
@@ -104,7 +131,10 @@ export default function App() {
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl"
       >
-        <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex justify-between items-center shadow-2xl">
+        <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-4 flex justify-between items-center shadow-2xl relative overflow-hidden">
+          {/* Neon Line */}
+          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-yellow to-transparent opacity-50" />
+          
           <div className="flex items-center gap-2">
             <img 
               src="https://i.ibb.co/kV5HyZyK/icon-y-w.png" 
@@ -199,7 +229,10 @@ export default function App() {
           </p>
         </div>
 
-        <footer className="mt-32 text-center border-t border-white/5 pt-12">
+        <footer className="mt-32 text-center border-t border-white/5 pt-12 relative">
+          {/* Footer Glow */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-neon-yellow/30 to-transparent" />
+          
           <div className="flex flex-col items-center gap-4">
             <img 
               src="https://i.ibb.co/kV5HyZyK/icon-y-w.png" 
